@@ -1,0 +1,79 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React Native Packager
+# https://github.com/facebook/react-native
+/ios/Pods/
+**/node_modules/
+*.log
+
+# Xcode
+###.DS_Store
+ios/.DS_Store
+ios/.vscode/
+ios/xcuserdata/
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/*.pbxuser
+ios/*.mode1v3
+ios/*.mode2v3
+ios/*.perspectivev3
+*.xcodeproj/*
+*.xcworkspace/*
+
+# Android
+###.DS_Store
+android/.DS_Store
+android/build/
+android/app/build/
+android/.gradle/
+android/local.properties
+android/.idea/
+android/gradle.properties
+android/gradle/
+android/app/.cxx/
+android/app/src/main/jniLibs/
+android/app/libs/
+
+# BUCK
+buck-out/
+\.buckd/
+.buckconfig.local
+.buckconfig
+
+# Logs
+logs
+*.log
+*.log.*
+
+# Tests
+/coverage/
+
+# Expo
+.expo/
+.expo-shared/
+
+# Metro bundler
+.cache/
+
+# Misc
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+
+# macOS
+*.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Intellij IDEA
+.idea/
+*.iml
