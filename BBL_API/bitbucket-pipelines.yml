@@ -1,0 +1,33 @@
+definitions:
+  steps:
+    - &build_prod
+      name: Build prod env
+      trigger: automatic
+      runs-on:
+        - self.hosted
+        - linux.shell
+        - prod
+      script:
+        - chmod +x ./.cicd/scripts/*
+        - ./.cicd/scripts/build.sh
+    - &deploy_prod
+      name: Deploy prod env
+      runs-on:
+        - self.hosted
+        - linux.shell
+        - prod
+      script:
+        - chmod +x ./.cicd/scripts/*
+        - ./.cicd/scripts/deploy.sh
+
+pipelines:
+  branches:
+    production:
+      - step:
+          <<: *build_prod
+          name: Build bblmmpapi to prod env
+          deployment: bblmmpapi-bp
+      - step:
+          <<: *deploy_prod
+          name: Deploy bblmmpapi to prod env
+          deployment: bblmmpapi-dp

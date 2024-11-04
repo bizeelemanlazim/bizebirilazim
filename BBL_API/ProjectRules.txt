@@ -1,0 +1,1 @@
+>Projeye Third Party eklenti eklenecekse Solution tarafından 'Management nuget package' denilerek yüklenmesi gerekir.

@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBL.Core", "BBL.Core\BBL.Core.csproj", "{4D465163-FA3C-4B58-908B-AA116AF79341}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBL.Entities", "BBL.Entities\BBL.Entities.csproj", "{AD2CB69E-0F47-4868-867E-F5DB072B890F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBL.DataAccess", "BBL.DataAccess\BBL.DataAccess.csproj", "{C9A6D95F-F8A6-4698-B8D3-44CC199D2A89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBL.Business", "BBL.Business\BBL.Business.csproj", "{0EE93CDC-52CB-4DEE-BD94-A132C8D21DEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BBL.API", "BBL.API\BBL.API.csproj", "{011EFE5B-8607-4D5F-98FB-76E7127BBC2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{58EACC81-BB5E-4FB3-9D32-55B631A5DF5D}"
+	ProjectSection(SolutionItems) = preProject
+		Documents.txt = Documents.txt
+		MigrationReadMe.txt = MigrationReadMe.txt
+		ProjectRules.txt = ProjectRules.txt
+	EndProjectSection
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{29A5A875-E258-4124-B166-8BE3D6FA3DBC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D465163-FA3C-4B58-908B-AA116AF79341}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D465163-FA3C-4B58-908B-AA116AF79341}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D465163-FA3C-4B58-908B-AA116AF79341}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D465163-FA3C-4B58-908B-AA116AF79341}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2CB69E-0F47-4868-867E-F5DB072B890F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2CB69E-0F47-4868-867E-F5DB072B890F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2CB69E-0F47-4868-867E-F5DB072B890F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2CB69E-0F47-4868-867E-F5DB072B890F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9A6D95F-F8A6-4698-B8D3-44CC199D2A89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9A6D95F-F8A6-4698-B8D3-44CC199D2A89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9A6D95F-F8A6-4698-B8D3-44CC199D2A89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9A6D95F-F8A6-4698-B8D3-44CC199D2A89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE93CDC-52CB-4DEE-BD94-A132C8D21DEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE93CDC-52CB-4DEE-BD94-A132C8D21DEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE93CDC-52CB-4DEE-BD94-A132C8D21DEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE93CDC-52CB-4DEE-BD94-A132C8D21DEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{011EFE5B-8607-4D5F-98FB-76E7127BBC2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{011EFE5B-8607-4D5F-98FB-76E7127BBC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{011EFE5B-8607-4D5F-98FB-76E7127BBC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{011EFE5B-8607-4D5F-98FB-76E7127BBC2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29A5A875-E258-4124-B166-8BE3D6FA3DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A5A875-E258-4124-B166-8BE3D6FA3DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A5A875-E258-4124-B166-8BE3D6FA3DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A5A875-E258-4124-B166-8BE3D6FA3DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {606E77D7-E83F-4524-810D-35E46128A38B}
+	EndGlobalSection
+EndGlobal

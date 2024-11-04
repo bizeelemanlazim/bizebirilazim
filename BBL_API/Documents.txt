@@ -1,0 +1,3 @@
+Auth>
+	1- DeviceToken (mobile) header gönderilecek
+	2- DeviceType (mobile/web) header gönderilecek (Enum(DeviceTypeGeneral))
