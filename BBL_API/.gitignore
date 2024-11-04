@@ -1,0 +1,65 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Publish folder
+publish/
+
+# Visual Studio database files
+*.mdf
+*.ldf
+
+# Visual Studio 2019/2022 (optional)
+.vsconfig
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Temporary files
+*.tmp
+*.temp
+
+# Backup files
+*~ 
+*.bak
+*.swp
+
+# Other
+Thumbs.db
+ehthumbs.db
+Icon?
