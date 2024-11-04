@@ -1,0 +1,157 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bbl-front-end-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bbl-front-end
+  template:
+    metadata:
+      labels:
+        app: bbl-front-end
+    spec:
+      containers:
+        - name: bbl-front-end
+          image: bbl:front.end-0.0.1
+          ports:
+            - containerPort: 80
+          env:
+            - name: NODE_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: NODE_ENV
+            - name: REACT_APP_GOOGLE_CLIENT_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: REACT_APP_GOOGLE_CLIENT_ID
+            - name: REACT_APP_FACEBOOK_APP_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: REACT_APP_FACEBOOK_APP_ID
+            - name: REACT_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: REACT_BASE_URL
+            - name: PORT
+              value: "80"
+          volumeMounts:
+            - name: app-volume
+              mountPath: /app
+            - name: node-modules-volume
+              mountPath: /app/node_modules
+      volumes:
+        - name: app-volume
+          hostPath:
+            path: /path/to/local/app
+        - name: node-modules-volume
+          emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bbl-front-end-service
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 3000
+  selector:
+    app: bbl-front-end
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bbl-config
+data:
+  NODE_ENV: "your-node-env"
+  REACT_APP_GOOGLE_CLIENT_ID: "your-google-client-id"
+  REACT_APP_FACEBOOK_APP_ID: "your-facebook-app-id"
+  REACT_BASE_URL: "your-react-base-url"
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bbl-front-end-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bbl-front-end
+  template:
+    metadata:
+      labels:
+        app: bbl-front-end
+    spec:
+      containers:
+        - name: bbl-front-end
+          image: bbl:front.end-0.0.1
+          ports:
+            - containerPort: 80
+          env:
+            - name: NODE_ENV
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: NODE_ENV
+            - name: REACT_APP_GOOGLE_CLIENT_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: REACT_APP_GOOGLE_CLIENT_ID
+            - name: REACT_APP_FACEBOOK_APP_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: REACT_APP_FACEBOOK_APP_ID
+            - name: REACT_BASE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: bbl-config
+                  key: REACT_BASE_URL
+            - name: PORT
+              value: "80"
+          volumeMounts:
+            - name: app-volume
+              mountPath: /app
+            - name: node-modules-volume
+              mountPath: /app/node_modules
+      volumes:
+        - name: app-volume
+          hostPath:
+            path: /path/to/local/app
+        - name: node-modules-volume
+          emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bbl-front-end-service
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 3000
+  selector:
+    app: bbl-front-end
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: bbl-config
+data:
+  NODE_ENV: "your-node-env"
+  REACT_APP_GOOGLE_CLIENT_ID: "your-google-client-id"
+  REACT_APP_FACEBOOK_APP_ID: "your-facebook-app-id"
+  REACT_BASE_URL: "your-react-base-url"
+aws eks --region <REGION> update-kubeconfig --name <CLUSTER_NAME>

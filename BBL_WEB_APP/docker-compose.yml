@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  bbl.front.end:
+    image: bbl:front.end-0.0.1
+    container_name: BBLfront.end
+    ports:
+      - "3000:80"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: always
+    environment:
+      - NODE_ENV=${NODE_ENV}
+      - REACT_APP_GOOGLE_CLIENT_ID=${REACT_APP_GOOGLE_CLIENT_ID}
+      - REACT_APP_FACEBOOK_APP_ID=${REACT_APP_FACEBOOK_APP_ID}
+      - REACT_BASE_URL=${REACT_BASE_URL}
+      - PORT=${PORT}
